@@ -1,0 +1,52 @@
+
+一. 安装环境：
+	mysql/skype/telegram/xshell/xftp
+	eclipse/tomcat/maven/redis/jdk/git
+
+	jdk: JAVA_HOME D:\soft\java\jdk\8\jdk Path %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+二. 创建
+	创建分支: git checkout -b dev
+
+	查看：  git branch
+
+	推送到远程仓库: git push origin dev
+
+	测试从远程获取: git pull origin dev
+
+三. 删除
+	删除merge过的分支： git branch -d new-game
+	删除分支（不管它有没有merge）： git branch -D new-game
+	
+	查看远程分支：git branch -r
+	
+	删除远程分支： git push origin :new-game/ git push --delete origin new-game
+
+四. 导出git两个分支之间更新部分
+
+	git archive -o 导出的目录 结束ID $(git diff --name-only --diff-filter=AMCR 开始ID  结束ID)
+
+	git archive -o e:/update/20170606/test.zip 结束ID $(git diff --name-only --diff-filter=AMCR 开始ID  结束ID)
+
+	例子：
+	git archive -o e:/update/test.zip fc7b0b261618b629f0927989548b9d7f1ab35d7f $(git diff --name-only --diff-filter=AMCR 5d74cf1e8ac8d74c13c7d9a703e8644292124dc1 fc7b0b261618b629f0927989548b9d7f1ab35d7f)
+
+五. windows 释放被占用的端口
+
+	netstat -aon|findstr "80"
+
+	tasklist|find "5820"
+
+	taskkill /pid 5820 /f
+
+六. sky 双开
+	"C:\Program Files (x86)\Skype\Phone\Skype.exe" /secondary
+
+	
+	
+	
+	
+	
+	
+	
+	
